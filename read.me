@@ -1,1 +1,49 @@
+#overview
+i have gone through the resources for microsoft guidance but it was all book verse or some other data set so i wasnt able to implement . i did looked in to research papers too , but mostly o 
+found various research reagarding data rather than actual approach for implementation.
+ code uses the NLTK library to check if a token is a valid word and find the best match using the difflib library.
+ but i found gpt 2 model works better , i found this while going through a website
+then i wrote the code rudely and used chat gpt to refine and remove errors
+ and also uses built in data
+and currently it only corrects mistakes, and generate some extra missing words to complete sentence i wasnt able to make it so that it can correct grammar
 
+
+
+#sample response 1:
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package words to /root/nltk_data...
+[nltk_data]   Package words is already up-to-date!
+Enter a sentence: tak me to chrch
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Healed sentence: teak me to church
+Generated text: teak me to church.
+
+i meant it to say take me to church, it did corrected church and instead of take respellet it teak.
+
+
+"I'm not going to be able to do that.
+
+#sample response 2:
+
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package words to /root/nltk_data...
+[nltk_data]   Package words is already up-to-date!
+Enter a sentence: we dont
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Healed sentence: we dont
+Generated text: we dont know what to do with this. I'm not sure if it's a good idea to
+
+#how to run:
+
+if u can just put the whole script.ipnyb directly into google colab it will run
+
+to run on internal machine comment out
+!pip install nltk
+!pip install transformers
+!pip install torch
+and
+downlaod these seperately from your cmd
